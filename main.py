@@ -41,9 +41,25 @@ def preprocess(
         )
 
 
+def build_model(input_shape: (int, int), output_shape: int) -> Sequential:
+    model = Sequential()
+
+    model.add(LSTM(400, input_shape=input_shape, return_sequences=True))
+    model.add(Dropout(0.2))
+    model.add(LSTM(400))
+    model.add(Dropout(0.2))
+    model.add(Dense(output_shape, activation="softmax"))
+
+    model.compile(loss="categorical_crossentropy", optimizer="adam")
+
+    return model
+
+
 if __name__ == "__main__":
     text = load_dataset("data/poems.json")
 
     chars, n_to_char, char_to_n = create_mapping(text)
 
     X, y = preprocess(text, char_to_n, chars)
+
+    model = build_model((X.shape[1], X.shape[2]), y.shape[1])
