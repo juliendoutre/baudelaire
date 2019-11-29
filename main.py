@@ -63,7 +63,7 @@ def generate(
 ) -> str:
     full_string = [n_to_char[value] for value in starter]
 
-    for i in range(seq_length):
+    for _ in range(seq_length):
         x = np.reshape(starter, (1, len(starter), 1))
         x = x / float(len(chars))
 
