@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from typing import Dict
 from keras.layers import Dense, Dropout, LSTM
 from keras.models import Sequential
