@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import scrapy
+import re
 
 
 class PoemsScrapper(scrapy.Spider):
@@ -11,6 +12,8 @@ class PoemsScrapper(scrapy.Spider):
 
     name = "poems-scrapper"
     start_urls = ["https://www.poesie-francaise.fr/poemes-charles-baudelaire/"]
+    reg1 = re.compile(r"\<span class=\"decalage\d+\"\>\<\/span\>")
+    reg2 = re.compile(r"\<i class=\"poemes-auteurs\">\u00c9crit en \d\d\d\d\.\<\/i\>")
 
     def parse(self, response):
         for poeme_link_container in response.css(".poemes-auteurs"):
@@ -26,9 +29,16 @@ class PoemsScrapper(scrapy.Spider):
         yield {
             "title": title.replace("Titre : ", ""),
             "collection": collection,
-            "text": text.replace("<p>", "")
-            .replace("</p>", "")
-            .replace("<br>", "\n")
-            .replace("Sonnet.\n\n", "")
-            .replace('<span class="decalage2"></span>', ""),
+            "text": self.reg1.sub(
+                "",
+                self.reg2.sub(
+                    "",
+                    text.replace("<p>", "")
+                    .replace("</p>", "")
+                    .replace("<b>", "")
+                    .replace("</b>", "")
+                    .replace("<br>", "")
+                    .replace("Sonnet.", ""),
+                ),
+            ),
         }
