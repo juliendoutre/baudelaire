@@ -23,10 +23,15 @@ I fetched Baudelaire's poems from this [website](https://www.poesie-francaise.fr
 
 Run
 ```shell
-scrapy runspider scrapers/poems.py -t json -o data/poems.json
+scrapy runspider scraping/poems.py -t json -o data/poems.json
 ```
 
 to save the poems contents and a few metadata in the `data/poems.json`.
+
+## Dataset description
+
+You can find some metadata about the poems and the collections they are categorized in, in `data/stats.json`.
+This json was generated with the `scraping/analyzer.py` script.
 
 ## Tutorials
 

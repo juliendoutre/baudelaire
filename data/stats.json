@@ -1,0 +1,759 @@
+{
+    "poems": {
+        "\u00c0 celle qui est trop gaie": {
+            "lines": 36,
+            "characters": 1058
+        },
+        "\u00c0 M. Antony Bruno": {
+            "lines": 14,
+            "characters": 651
+        },
+        "All\u00e9gorie": {
+            "lines": 20,
+            "characters": 899
+        },
+        "\u00c0 une dame cr\u00e9ole": {
+            "lines": 14,
+            "characters": 650
+        },
+        "\u00c0 une Madone": {
+            "lines": 45,
+            "characters": 1983
+        },
+        "\u00c0 une Malabaraise": {
+            "lines": 28,
+            "characters": 1320
+        },
+        "Au lecteur": {
+            "lines": 40,
+            "characters": 1868
+        },
+        "\u00c0 une heure du matin": {
+            "lines": 4,
+            "characters": 2362
+        },
+        "\u00c0 M. Eug\u00e8ne Fromentin": {
+            "lines": 48,
+            "characters": 1509
+        },
+        "\u00c0 une mendiante rousse": {
+            "lines": 56,
+            "characters": 1323
+        },
+        "Alchimie de la douleur": {
+            "lines": 14,
+            "characters": 415
+        },
+        "Incompatibilit\u00e9": {
+            "lines": 28,
+            "characters": 1278
+        },
+        "Harmonie du soir": {
+            "lines": 16,
+            "characters": 751
+        },
+        "Horreur sympathique": {
+            "lines": 14,
+            "characters": 405
+        },
+        "Hymne": {
+            "lines": 20,
+            "characters": 570
+        },
+        "R\u00eave parisien": {
+            "lines": 63,
+            "characters": 1802
+        },
+        "Francisc\u00e6 me\u00e6 laudes": {
+            "lines": 33,
+            "characters": 759
+        },
+        "Hymne \u00e0 la beaut\u00e9": {
+            "lines": 28,
+            "characters": 1320
+        },
+        "Vers pour le portrait de M. Honor\u00e9 Daumier": {
+            "lines": 16,
+            "characters": 485
+        },
+        "Un voyage \u00e0 Cyth\u00e8re": {
+            "lines": 60,
+            "characters": 2708
+        },
+        "Un plaisant": {
+            "lines": 5,
+            "characters": 1022
+        },
+        "Un h\u00e9misph\u00e8re dans une chevelure": {
+            "lines": 7,
+            "characters": 1645
+        },
+        "Une martyre": {
+            "lines": 61,
+            "characters": 2251
+        },
+        "Une charogne": {
+            "lines": 48,
+            "characters": 1781
+        },
+        "Une gravure fantastique": {
+            "lines": 14,
+            "characters": 628
+        },
+        "Un cabaret fol\u00e2tre": {
+            "lines": 8,
+            "characters": 224
+        },
+        "Tristesses de la lune": {
+            "lines": 14,
+            "characters": 613
+        },
+        "Tu mettrais l'univers entier dans ta ruelle": {
+            "lines": 18,
+            "characters": 801
+        },
+        "Tout enti\u00e8re": {
+            "lines": 24,
+            "characters": 723
+        },
+        "Sur le Tasse en prison": {
+            "lines": 14,
+            "characters": 613
+        },
+        "R\u00e9versibilit\u00e9": {
+            "lines": 25,
+            "characters": 1171
+        },
+        "Sonnet d'automne": {
+            "lines": 14,
+            "characters": 645
+        },
+        "Sur les d\u00e9buts d'Amina Boschetti": {
+            "lines": 14,
+            "characters": 646
+        },
+        "Sed non satiata": {
+            "lines": 14,
+            "characters": 638
+        },
+        "Sisina": {
+            "lines": 14,
+            "characters": 629
+        },
+        "Semper eadem": {
+            "lines": 14,
+            "characters": 668
+        },
+        "Remords posthume": {
+            "lines": 14,
+            "characters": 644
+        },
+        "Recueillement": {
+            "lines": 14,
+            "characters": 649
+        },
+        "Que diras-tu ce soir": {
+            "lines": 14,
+            "characters": 656
+        },
+        "Quand le ciel bas et lourd": {
+            "lines": 20,
+            "characters": 904
+        },
+        "Obsession": {
+            "lines": 14,
+            "characters": 649
+        },
+        "Parfum exotique": {
+            "lines": 14,
+            "characters": 626
+        },
+        "Paysage": {
+            "lines": 26,
+            "characters": 1158
+        },
+        "Pluvi\u00f4se, irrit\u00e9 contre la ville enti\u00e8re": {
+            "lines": 14,
+            "characters": 606
+        },
+        "Moesta et errabunda": {
+            "lines": 30,
+            "characters": 1350
+        },
+        "Madrigal triste": {
+            "lines": 42,
+            "characters": 1256
+        },
+        "L'invitation au voyage": {
+            "lines": 42,
+            "characters": 965
+        },
+        "L'id\u00e9al": {
+            "lines": 14,
+            "characters": 627
+        },
+        "Lola de Valence": {
+            "lines": 4,
+            "characters": 180
+        },
+        "L'irr\u00e9parable": {
+            "lines": 50,
+            "characters": 1967
+        },
+        "L'irr\u00e9m\u00e9diable": {
+            "lines": 42,
+            "characters": 1219
+        },
+        "L'invitation au voyage (II)": {
+            "lines": 11,
+            "characters": 4600
+        },
+        "L'horloge": {
+            "lines": 24,
+            "characters": 1138
+        },
+        "L'horloge (II)": {
+            "lines": 6,
+            "characters": 1692
+        },
+        "L'homme et la mer": {
+            "lines": 16,
+            "characters": 710
+        },
+        "L'h\u00e9autontimoroum\u00e9nos": {
+            "lines": 29,
+            "characters": 845
+        },
+        "L'examen de minuit": {
+            "lines": 32,
+            "characters": 919
+        },
+        "L'ennemi": {
+            "lines": 14,
+            "characters": 641
+        },
+        "L'\u00e9tranger": {
+            "lines": 15,
+            "characters": 543
+        },
+        "Les petites vieilles": {
+            "lines": 89,
+            "characters": 3860
+        },
+        "Le soleil": {
+            "lines": 20,
+            "characters": 952
+        },
+        "Les promesses d'un visage": {
+            "lines": 20,
+            "characters": 786
+        },
+        "Les plaintes d'un Icare": {
+            "lines": 16,
+            "characters": 485
+        },
+        "Les phares": {
+            "lines": 44,
+            "characters": 1994
+        },
+        "Les hiboux": {
+            "lines": 14,
+            "characters": 432
+        },
+        "Les dons des f\u00e9es": {
+            "lines": 16,
+            "characters": 4475
+        },
+        "Les m\u00e9tamorphoses du vampire": {
+            "lines": 28,
+            "characters": 1309
+        },
+        "Les deux bonnes soeurs": {
+            "lines": 14,
+            "characters": 646
+        },
+        "Les chats": {
+            "lines": 14,
+            "characters": 656
+        },
+        "Les aveugles": {
+            "lines": 14,
+            "characters": 639
+        },
+        "Les bijoux": {
+            "lines": 32,
+            "characters": 1453
+        },
+        "Lesbos": {
+            "lines": 75,
+            "characters": 3394
+        },
+        "Le vin des amants": {
+            "lines": 14,
+            "characters": 414
+        },
+        "Le vin des chiffonniers": {
+            "lines": 32,
+            "characters": 1449
+        },
+        "Le voyage": {
+            "lines": 155,
+            "characters": 6637
+        },
+        "Le vin de l'assassin": {
+            "lines": 52,
+            "characters": 1595
+        },
+        "Le vieux saltimbanque": {
+            "lines": 10,
+            "characters": 4407
+        },
+        "Le vampire": {
+            "lines": 24,
+            "characters": 693
+        },
+        "Les yeux de Berthe": {
+            "lines": 12,
+            "characters": 563
+        },
+        "Le tonneau de la haine": {
+            "lines": 14,
+            "characters": 645
+        },
+        "Les veuves": {
+            "lines": 15,
+            "characters": 5431
+        },
+        "Les t\u00e9n\u00e8bres": {
+            "lines": 14,
+            "characters": 540
+        },
+        "Les sept vieillards": {
+            "lines": 53,
+            "characters": 2349
+        },
+        "Le squelette laboureur": {
+            "lines": 34,
+            "characters": 967
+        },
+        "Les foules": {
+            "lines": 6,
+            "characters": 2003
+        },
+        "Le serpent qui danse": {
+            "lines": 36,
+            "characters": 891
+        },
+        "Le revenant": {
+            "lines": 14,
+            "characters": 415
+        },
+        "Le r\u00eave d'un curieux": {
+            "lines": 14,
+            "characters": 628
+        },
+        "Le rebelle": {
+            "lines": 14,
+            "characters": 640
+        },
+        "Le poss\u00e9d\u00e9": {
+            "lines": 14,
+            "characters": 665
+        },
+        "Le reniement de Saint-Pierre": {
+            "lines": 32,
+            "characters": 1488
+        },
+        "Le portrait": {
+            "lines": 14,
+            "characters": 560
+        },
+        "Le poison": {
+            "lines": 20,
+            "characters": 713
+        },
+        "Le port": {
+            "lines": 1,
+            "characters": 793
+        },
+        "Le mort joyeux": {
+            "lines": 14,
+            "characters": 640
+        },
+        "Le parfum": {
+            "lines": 14,
+            "characters": 503
+        },
+        "Le miroir": {
+            "lines": 8,
+            "characters": 477
+        },
+        "Le mauvais moine": {
+            "lines": 14,
+            "characters": 625
+        },
+        "Le monstre": {
+            "lines": 77,
+            "characters": 2341
+        },
+        "Le mauvais vitrier": {
+            "lines": 16,
+            "characters": 4861
+        },
+        "Le jeu": {
+            "lines": 24,
+            "characters": 1079
+        },
+        "Le jet d'eau": {
+            "lines": 42,
+            "characters": 1042
+        },
+        "Le L\u00e9th\u00e9": {
+            "lines": 24,
+            "characters": 883
+        },
+        "Le joujou du pauvre": {
+            "lines": 8,
+            "characters": 2343
+        },
+        "Le go\u00fbt du n\u00e9ant": {
+            "lines": 15,
+            "characters": 712
+        },
+        "Le gouffre": {
+            "lines": 14,
+            "characters": 650
+        },
+        "Le guignon": {
+            "lines": 14,
+            "characters": 440
+        },
+        "Le g\u00e2teau": {
+            "lines": 4,
+            "characters": 4191
+        },
+        "Le flambeau vivant": {
+            "lines": 14,
+            "characters": 675
+        },
+        "Le galant tireur": {
+            "lines": 3,
+            "characters": 1159
+        },
+        "Le flacon": {
+            "lines": 28,
+            "characters": 1261
+        },
+        "Le Fou et la V\u00e9nus": {
+            "lines": 7,
+            "characters": 1382
+        },
+        "Le d\u00e9sespoir de la vieille": {
+            "lines": 4,
+            "characters": 730
+        },
+        "Le cygne": {
+            "lines": 55,
+            "characters": 2409
+        },
+        "Le cr\u00e9puscule du soir": {
+            "lines": 38,
+            "characters": 1719
+        },
+        "Le couvercle": {
+            "lines": 14,
+            "characters": 622
+        },
+        "Le cr\u00e9puscule du matin": {
+            "lines": 28,
+            "characters": 1321
+        },
+        "Le confiteor de l'artiste": {
+            "lines": 4,
+            "characters": 1426
+        },
+        "Le coucher du soleil romantique": {
+            "lines": 14,
+            "characters": 652
+        },
+        "Le chien et le flacon": {
+            "lines": 3,
+            "characters": 761
+        },
+        "Le chat (I)": {
+            "lines": 14,
+            "characters": 487
+        },
+        "Le chat (II)": {
+            "lines": 42,
+            "characters": 1266
+        },
+        "Le cadre": {
+            "lines": 14,
+            "characters": 522
+        },
+        "Le beau navire": {
+            "lines": 40,
+            "characters": 1668
+        },
+        "Le balcon": {
+            "lines": 30,
+            "characters": 1421
+        },
+        "La voix": {
+            "lines": 28,
+            "characters": 1316
+        },
+        "La ran\u00e7on": {
+            "lines": 16,
+            "characters": 504
+        },
+        "La servante au grand coeur": {
+            "lines": 22,
+            "characters": 1043
+        },
+        "L'avertisseur": {
+            "lines": 14,
+            "characters": 460
+        },
+        "La vie ant\u00e9rieure": {
+            "lines": 14,
+            "characters": 650
+        },
+        "L'aube spirituelle": {
+            "lines": 14,
+            "characters": 612
+        },
+        "La pipe": {
+            "lines": 14,
+            "characters": 405
+        },
+        "La musique": {
+            "lines": 14,
+            "characters": 451
+        },
+        "La pri\u00e8re d'un pa\u00efen": {
+            "lines": 14,
+            "characters": 414
+        },
+        "La mort des pauvres": {
+            "lines": 14,
+            "characters": 674
+        },
+        "L'amour et le cr\u00e2ne": {
+            "lines": 20,
+            "characters": 498
+        },
+        "La muse malade": {
+            "lines": 14,
+            "characters": 652
+        },
+        "L'amour du mensonge": {
+            "lines": 24,
+            "characters": 1114
+        },
+        "La muse v\u00e9nale": {
+            "lines": 14,
+            "characters": 614
+        },
+        "La mort des amants": {
+            "lines": 14,
+            "characters": 574
+        },
+        "La mort des artistes": {
+            "lines": 14,
+            "characters": 633
+        },
+        "L'\u00e2me du vin": {
+            "lines": 24,
+            "characters": 1081
+        },
+        "La fin de la journ\u00e9e": {
+            "lines": 14,
+            "characters": 410
+        },
+        "La lune offens\u00e9e": {
+            "lines": 14,
+            "characters": 642
+        },
+        "La fontaine de sang": {
+            "lines": 14,
+            "characters": 648
+        },
+        "La g\u00e9ante": {
+            "lines": 14,
+            "characters": 641
+        },
+        "L'albatros": {
+            "lines": 16,
+            "characters": 707
+        },
+        "La destruction": {
+            "lines": 14,
+            "characters": 609
+        },
+        "La femme sauvage et la petite-ma\u00eetresse": {
+            "lines": 11,
+            "characters": 3917
+        },
+        "La chambre double": {
+            "lines": 18,
+            "characters": 4335
+        },
+        "La cloche f\u00eal\u00e9e": {
+            "lines": 14,
+            "characters": 654
+        },
+        "La beaut\u00e9": {
+            "lines": 14,
+            "characters": 648
+        },
+        "La B\u00e9atrice": {
+            "lines": 30,
+            "characters": 1332
+        },
+        "La chevelure": {
+            "lines": 35,
+            "characters": 1574
+        },
+        "Je te donne ces vers": {
+            "lines": 14,
+            "characters": 615
+        },
+        "Je n'ai pas pour ma\u00eetresse une lionne illustre": {
+            "lines": 48,
+            "characters": 2221
+        },
+        "Je t'adore \u00e0 l'\u00e9gal de la vo\u00fbte nocturne": {
+            "lines": 10,
+            "characters": 445
+        },
+        "J'ai plus de souvenirs que si j'avais mille ans": {
+            "lines": 24,
+            "characters": 1091
+        },
+        "Je suis comme le roi d'un pays pluvieux": {
+            "lines": 18,
+            "characters": 827
+        },
+        "\u00c9p\u00eetre \u00e0 Sainte-Beuve": {
+            "lines": 78,
+            "characters": 3620
+        },
+        "J'aime le souvenir de ces \u00e9poques nues": {
+            "lines": 40,
+            "characters": 1821
+        },
+        "Femmes damn\u00e9es (1)": {
+            "lines": 28,
+            "characters": 1331
+        },
+        "Femmes damn\u00e9es (2)": {
+            "lines": 104,
+            "characters": 4622
+        },
+        "\u00c9pigraphe pour un livre condamn\u00e9": {
+            "lines": 14,
+            "characters": 424
+        },
+        "\u00c9l\u00e9vation": {
+            "lines": 20,
+            "characters": 868
+        },
+        "Don Juan aux enfers": {
+            "lines": 20,
+            "characters": 931
+        },
+        "De profundis clamavi": {
+            "lines": 14,
+            "characters": 640
+        },
+        "Ch\u00e2timent de l'orgueil": {
+            "lines": 26,
+            "characters": 1175
+        },
+        "Danse macabre": {
+            "lines": 61,
+            "characters": 2685
+        },
+        "Correspondances": {
+            "lines": 14,
+            "characters": 642
+        },
+        "Confession": {
+            "lines": 40,
+            "characters": 1475
+        },
+        "Ciel brouill\u00e9": {
+            "lines": 16,
+            "characters": 717
+        },
+        "Chacun sa chim\u00e8re": {
+            "lines": 7,
+            "characters": 1825
+        },
+        "Causerie": {
+            "lines": 14,
+            "characters": 649
+        },
+        "Chanson d'apr\u00e8s-midi": {
+            "lines": 40,
+            "characters": 1023
+        },
+        "Boh\u00e9miens en voyage": {
+            "lines": 14,
+            "characters": 619
+        },
+        "Bien loin d'ici": {
+            "lines": 14,
+            "characters": 426
+        },
+        "Avec ses v\u00eatements ondoyants": {
+            "lines": 14,
+            "characters": 613
+        },
+        "Brumes et pluies": {
+            "lines": 14,
+            "characters": 649
+        },
+        "B\u00e9n\u00e9diction": {
+            "lines": 76,
+            "characters": 3355
+        },
+        "\u00c0 une passante": {
+            "lines": 14,
+            "characters": 635
+        },
+        "number": 181
+    },
+    "collections": {
+        "Les fleurs du mal (1857)": {
+            "poems": 145,
+            "lines": 3751,
+            "characters": 151882
+        },
+        "Po\u00e9sies diverses": {
+            "poems": 2,
+            "lines": 62,
+            "characters": 2872
+        },
+        "Le Spleen de Paris (1869)": {
+            "poems": 23,
+            "lines": 189,
+            "characters": 56380
+        },
+        "Les \u00e9paves (1866)": {
+            "poems": 10,
+            "lines": 248,
+            "characters": 8195
+        },
+        "\u00c9p\u00eetres \u00e0 Sainte-Beuve (1845)": {
+            "poems": 1,
+            "lines": 78,
+            "characters": 3620
+        },
+        "number": 5
+    },
+    "lines": 4328,
+    "characters": 222949
+}
