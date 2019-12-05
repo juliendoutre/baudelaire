@@ -76,6 +76,29 @@ def sequence_to_string(seq: np.array, n_to_char: Dict[int, str]) -> str:
     return "".join([n_to_char[value] for value in seq])
 
 
+def generate_lines(
+    lines_number: int,
+    x: np.matrix,
+    seq_length: int,
+    chars: [str],
+    model: Sequential,
+    n_to_char: Dict[int, str],
+) -> str:
+    starter = x[random.randint(0, len(x))]
+    output = sequence_to_string(starter, n_to_char) + "\n"
+
+    for _ in range(lines_number):
+        starter = generate(starter, seq_length, chars, model)
+        output += sequence_to_string(starter, n_to_char)
+
+    return output
+
+
+def write_to_file(path: str, contents: str):
+    with open(path, "w") as f:
+        f.write(contents)
+
+
 if __name__ == "__main__":
     seq_length = 100
 
@@ -92,9 +115,6 @@ if __name__ == "__main__":
 
     model.load_weights("weights/weights1.h5")
 
-    starter = x[random.randint(0, len(x))]
-    print(sequence_to_string(starter, n_to_char))
-
-    for _ in range(10):
-        starter = generate(starter, seq_length, chars, model)
-        print(sequence_to_string(starter, n_to_char))
+    write_to_file(
+        "poem.txt", generate_lines(10, x, seq_length, chars, model, n_to_char)
+    )
