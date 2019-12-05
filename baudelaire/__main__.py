@@ -69,22 +69,26 @@ def main() -> None:
         default=100,
     )
 
-    cmd = parser.parse_args().cmd
+    args = parser.parse_args()
+
+    baudelaire = Baudelaire(sequence_length=args.sequence_length)
+
+    cmd = args.cmd
     if cmd == "train":
-        args = train_parser.parse_args()
-        baudelaire = Baudelaire(sequence_length=args.sequence_length)
         baudelaire.train(
             args.output, epochs=args.epochs, batch_size=args.batch_size,
         )
 
     elif cmd == "write":
-        args = generate_parser.parse_args()
         baudelaire = Baudelaire(sequence_length=args.sequence_length)
+
         if args.input is None:
             baudelaire.load_weights()
         else:
             baudelaire.load_weights(args.input)
-        output = baudelaire.generate_lines(args.lines_number)
+
+        output = baudelaire.generate_lines(args.sequences)
+
         if args.output is None:
             print(output)
         else:

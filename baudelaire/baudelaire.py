@@ -4,6 +4,10 @@
 import os
 import json
 import random
+import warnings
+
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
+warnings.simplefilter(action="ignore", category=FutureWarning)
 from keras.layers import Dense, Dropout, LSTM
 from keras.models import Sequential
 from keras.utils import np_utils
