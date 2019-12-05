@@ -3,7 +3,7 @@ name: Static Analysis
 on: [push]
 
 jobs:
-  build:
+  static-analysis:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1

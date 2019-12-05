@@ -9,6 +9,13 @@ Simply run:
 pip3 install baudelaire
 ```
 
+## Usage
+
+```shell
+baudelaire train --epochs 100 --batch_size 50
+baudelaire generate --lines 10
+```
+
 ## Set the environment
 
 Create a virtualenv:
@@ -46,10 +53,3 @@ This json was generated with the `scraping/analyzer.py` script.
 
 - https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3
 - https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/
-
-## TODO
-
-- add a CLI to allow control over the following operations:
-    - get data
-    - train the model (parameters choice) and save the weights
-    - load the weights and generate some text
