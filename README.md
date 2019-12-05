@@ -40,7 +40,6 @@ This json was generated with the `scraping/analyzer.py` script.
 
 ## TODO
 
-- refactor the code to use classes
 - add a CLI to allow control over the following operations:
     - get data
     - train the model (parameters choice) and save the weights

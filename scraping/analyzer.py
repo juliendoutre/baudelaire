@@ -11,10 +11,11 @@ class Analyzer:
 
     def __init__(self, path: str):
         self._load_dataset(path)
+        self.statistics: object = {}
 
     def _load_dataset(self, path: str):
-        with open(path, "r") as f:
-            self.dataset = json.load(f)
+        with open(path, "r") as file:
+            self.dataset = json.load(file)
 
     def compute_statistics(self):
         self.statistics = {
@@ -54,8 +55,8 @@ class Analyzer:
         self.statistics["poems"]["number"] = len(self.statistics["poems"])
 
     def save_to_file(self, path: str):
-        with open(path, "w") as f:
-            json.dump(self.statistics, f)
+        with open(path, "w") as file:
+            json.dump(self.statistics, file)
 
 
 if __name__ == "__main__":
