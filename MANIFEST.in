@@ -1,2 +1,2 @@
-include baudelaire/poems.json
-include baudelaire/weights/*.h5
+include baudelaire/data/poems.json
+include baudelaire/data/weights.h5

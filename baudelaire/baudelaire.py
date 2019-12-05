@@ -19,13 +19,9 @@ class Baudelaire:
     A text generator trained over Baudelaire's poems.
     """
 
-    def __init__(
-        self,
-        dataset_path: str = os.path.join(os.path.dirname(__file__), "poems.json"),
-        sequence_length: int = 100,
-    ) -> None:
+    def __init__(self, sequence_length: int = 100) -> None:
         self.sequence_length = sequence_length
-        self._load_dataset(dataset_path)
+        self._load_dataset(os.path.join(os.path.dirname(__file__), "data/poems.json"))
         self._create_character_number_mapping()
         self._preprocess()
         self._build_model()
@@ -94,7 +90,7 @@ class Baudelaire:
         self.model.save_weights(weights_path)
 
     def load_weights(
-        self, path: str = os.path.join(os.path.dirname(__file__), "weights/weights.h5")
+        self, path: str = os.path.join(os.path.dirname(__file__), "data/weights.h5")
     ) -> None:
         self.model.load_weights(path)
 

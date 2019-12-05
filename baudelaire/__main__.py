@@ -49,17 +49,13 @@ def main() -> None:
         "write", help="Generate some poetry based on your model or the default one"
     )
     generate_parser.add_argument(
-        "-n",
-        "--sequences",
-        type=int,
-        help="Number of sequences to generate",
-        default=1,
+        "-n", "--sequences", type=int, help="Number of sequences to generate", default=1
     )
     generate_parser.add_argument(
-        "-o", "--output", type=str, help="Path to which to save the output",
+        "-o", "--output", type=str, help="Path to which to save the output"
     )
     generate_parser.add_argument(
-        "-i", "--input", type=str, help="Path to weights to load to the model",
+        "-i", "--input", type=str, help="Path to weights to load to the model"
     )
     generate_parser.add_argument(
         "-s",
@@ -75,9 +71,7 @@ def main() -> None:
 
     cmd = args.cmd
     if cmd == "train":
-        baudelaire.train(
-            args.output, epochs=args.epochs, batch_size=args.batch_size,
-        )
+        baudelaire.train(args.output, epochs=args.epochs, batch_size=args.batch_size)
 
     elif cmd == "write":
         baudelaire = Baudelaire(sequence_length=args.sequence_length)

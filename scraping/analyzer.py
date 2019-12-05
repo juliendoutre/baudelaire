@@ -60,7 +60,7 @@ class Analyzer:
 
 
 def main() -> None:
-    analyzer = Analyzer("baudelaire/poems.json")
+    analyzer = Analyzer("baudelaire/data/poems.json")
     analyzer.compute_statistics()
     analyzer.save_to_file("data/stats.json")
 

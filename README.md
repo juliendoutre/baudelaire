@@ -57,4 +57,3 @@ This json was generated with the `scraping/analyzer.py` script.
 
 ## TODO
 - add logging with a verbose mode
-- save model to a file to avoid model compilation each time the command is run
