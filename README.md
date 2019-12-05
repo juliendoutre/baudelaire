@@ -1,5 +1,14 @@
 # Baudelaire
 
+A text generator trained over Baudelaire's poems.
+
+## Install the package
+
+Simply run:
+```shell
+pip3 install baudelaire
+```
+
 ## Set the environment
 
 Create a virtualenv:
@@ -23,17 +32,17 @@ I fetched Baudelaire's poems from this [website](https://www.poesie-francaise.fr
 
 Run
 ```shell
-scrapy runspider scraping/poems.py -t json -o data/poems.json
+scrapy runspider scraping/poems.py -t json -o poems.json
 ```
 
-to save the poems contents and a few metadata in the `data/poems.json`.
+to save the poems contents and a few metadata in a `poems.json` file.
 
 ## Dataset description
 
 You can find some metadata about the poems and the collections they are categorized in, in `data/stats.json`.
 This json was generated with the `scraping/analyzer.py` script.
 
-## Tutorials
+## Bibliography
 
 - https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3
 - https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/
@@ -44,4 +53,3 @@ This json was generated with the `scraping/analyzer.py` script.
     - get data
     - train the model (parameters choice) and save the weights
     - load the weights and generate some text
-- create a Messenger bot that generates Baudelaire poems on demand
