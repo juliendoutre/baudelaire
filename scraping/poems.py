@@ -3,6 +3,7 @@
 
 import re
 import scrapy
+from typing import Generator
 
 
 class PoemsScrapper(scrapy.Spider):
@@ -16,14 +17,14 @@ class PoemsScrapper(scrapy.Spider):
     reg2 = re.compile(r"\<i class=\"poemes-auteurs\">\u00c9crit en \d\d\d\d\.\<\/i\>")
     reg3 = re.compile(r"\n+")
 
-    def parse(self, response):
+    def parse(self, response) -> Generator:
         for poeme_link_container in response.css(".poemes-auteurs"):
             yield response.follow(
                 poeme_link_container.css("a::attr(href)").extract_first(),
                 callback=self.parse_poem_page,
             )
 
-    def parse_poem_page(self, response):
+    def parse_poem_page(self, response) -> Generator:
         title = response.css("h2.titrepoeme::text").extract_first()
         collection = response.css("p.soustitre a::text").extract_first()
         text = response.css(".postpoetique p").extract_first()

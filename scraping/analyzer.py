@@ -9,15 +9,15 @@ class Analyzer:
     A statistics computer about the dataset.
     """
 
-    def __init__(self, path: str):
+    def __init__(self, path: str) -> None:
         self._load_dataset(path)
-        self.statistics: object = {}
+        self.statistics = {}
 
-    def _load_dataset(self, path: str):
+    def _load_dataset(self, path: str) -> None:
         with open(path, "r") as file:
             self.dataset = json.load(file)
 
-    def compute_statistics(self):
+    def compute_statistics(self) -> None:
         self.statistics = {
             "poems": {},
             "collections": {},
@@ -54,7 +54,7 @@ class Analyzer:
         self.statistics["collections"]["number"] = len(self.statistics["collections"])
         self.statistics["poems"]["number"] = len(self.statistics["poems"])
 
-    def save_to_file(self, path: str):
+    def save_to_file(self, path: str) -> None:
         with open(path, "w") as file:
             json.dump(self.statistics, file)
 
