@@ -48,11 +48,9 @@ def preprocess(
 def build_model(input_shape: (int, int), output_shape: int) -> Sequential:
     model = Sequential()
 
-    model.add(LSTM(700, input_shape=input_shape, return_sequences=True))
+    model.add(LSTM(400, input_shape=input_shape, return_sequences=True))
     model.add(Dropout(0.2))
-    model.add(LSTM(700, return_sequences=True))
-    model.add(Dropout(0.2))
-    model.add(LSTM(700))
+    model.add(LSTM(400))
     model.add(Dropout(0.2))
     model.add(Dense(output_shape, activation="softmax"))
 
@@ -89,14 +87,14 @@ if __name__ == "__main__":
 
     model = build_model((X.shape[1], X.shape[2]), y.shape[1])
 
-    # model.fit(X, y, epochs=100, batch_size=50)
+    # model.fit(X, y, epochs=1, batch_size=100)
     # model.save_weights("weights/weights.h5")
 
-    model.load_weights("weights/weights_epoch_1.h5")
+    model.load_weights("weights/weights1.h5")
 
     starter = x[random.randint(0, len(x))]
     print(sequence_to_string(starter, n_to_char))
 
-    for i in range(10):
+    for _ in range(10):
         starter = generate(starter, seq_length, chars, model)
         print(sequence_to_string(starter, n_to_char))
