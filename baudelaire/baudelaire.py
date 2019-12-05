@@ -82,17 +82,16 @@ class Baudelaire:
     def _sequence_to_string(self, sequence: np.array) -> str:
         return "".join([self.number_to_character[value] for value in sequence])
 
-    def train(
-        self, epochs: int = 1, batch_size: int = 100, save_weights: bool = False
-    ) -> None:
+    def train(self, weights_path: str, epochs: int = 1, batch_size: int = 100,) -> None:
         self.model.fit(
             self.sequences, self.labels, epochs=epochs, batch_size=batch_size
         )
 
-        if save_weights:
-            self.model.save_weights(f"weights/weights_{epochs}_{batch_size}.h5")
+        self.model.save_weights(weights_path)
 
-    def load_weights(self, path: str = "weights/weights.h5") -> None:
+    def load_weights(
+        self, path: str = os.path.join(os.path.dirname(__file__), "weights/weights.h5")
+    ) -> None:
         self.model.load_weights(path)
 
     def generate(self, starting_sequence: np.array) -> np.array:
