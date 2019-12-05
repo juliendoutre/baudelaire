@@ -92,7 +92,7 @@ def main() -> None:
         if args.output is None:
             print(output)
         else:
-            write_to_file(output)
+            write_to_file(output, path=args.output)
 
     else:
         raise parser.error(f"Invalid command {cmd}")
