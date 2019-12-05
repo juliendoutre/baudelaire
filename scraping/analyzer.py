@@ -59,7 +59,11 @@ class Analyzer:
             json.dump(self.statistics, file)
 
 
-if __name__ == "__main__":
-    analyzer = Analyzer("data/poems.json")
+def main() -> None:
+    analyzer = Analyzer("baudelaire/poems.json")
     analyzer.compute_statistics()
     analyzer.save_to_file("data/stats.json")
+
+
+if __name__ == "__main__":
+    main()
