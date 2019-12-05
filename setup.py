@@ -12,7 +12,7 @@ setup(
     license="MIT",
     version="0.1.0",
     packages=["baudelaire"],
-    # install_requires=["numpy", "keras" "tensorflow"],
+    install_requires=["numpy", "keras"],
     entry_points={"console_scripts": ["baudelaire = baudelaire.__main__:main"]},
     zip_safe=False,
     include_package_data=True,

@@ -86,7 +86,7 @@ class Baudelaire:
     def _sequence_to_string(self, sequence: np.array) -> str:
         return "".join([self.number_to_character[value] for value in sequence])
 
-    def train(self, weights_path: str, epochs: int = 1, batch_size: int = 100,) -> None:
+    def train(self, weights_path: str, epochs: int = 1, batch_size: int = 100) -> None:
         self.model.fit(
             self.sequences, self.labels, epochs=epochs, batch_size=batch_size
         )
@@ -123,6 +123,6 @@ class Baudelaire:
         return output
 
 
-def write_to_file(contents: str, path: str = "poem.txt",) -> None:
+def write_to_file(contents: str, path: str = "poem.txt") -> None:
     with open(path, "w") as file:
         file.write(contents)
