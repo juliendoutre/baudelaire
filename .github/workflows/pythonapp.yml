@@ -31,7 +31,7 @@ jobs:
     - name: Lint with pylint
       run: |
         pip install pylint
-        pylint .
+        pylint baudelaire
     - name: Check typing with mypy
       run: |
         pip install mypy
