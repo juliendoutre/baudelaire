@@ -30,19 +30,23 @@ class PoemsScrapper(scrapy.Spider):
         yield {
             "title": title.replace("Titre : ", ""),
             "collection": collection,
-            "text": self.reg3.sub(
-                "\n",
-                self.reg1.sub(
-                    "",
-                    self.reg2.sub(
+            "text": [
+                line.strip()
+                for line in self.reg3.sub(
+                    "\n",
+                    self.reg1.sub(
                         "",
-                        text.replace("<p>", "")
-                        .replace("</p>", "")
-                        .replace("<b>", "")
-                        .replace("</b>", "")
-                        .replace("<br>", "\n")
-                        .replace("Sonnet.", ""),
+                        self.reg2.sub(
+                            "",
+                            text.replace("<p>", "")
+                            .replace("</p>", "")
+                            .replace("<b>", "")
+                            .replace("</b>", "")
+                            .replace("<br>", "\n")
+                            .replace("Sonnet.", ""),
+                        ),
                     ),
-                ),
-            ),
+                ).split("\n")
+                if len(line) != 0
+            ],
         }

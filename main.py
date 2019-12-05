@@ -13,7 +13,7 @@ import json
 def load_dataset(path: str) -> str:
     with open(path, "r") as f:
         poems = json.load(f)
-        return "\n".join([poem["text"] for poem in poems]).strip().lower()
+        return "\n".join(["\n".join(poem["text"]) for poem in poems]).strip().lower()
 
 
 def create_mapping(text: str) -> ([str], Dict[int, str], Dict[str, int]):
