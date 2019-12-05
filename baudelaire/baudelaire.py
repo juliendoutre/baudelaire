@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import os
 import json
 import random
 from keras.layers import Dense, Dropout, LSTM
@@ -15,7 +16,9 @@ class Baudelaire:
     """
 
     def __init__(
-        self, dataset_path: str = "data/poems.json", sequence_length: int = 100
+        self,
+        dataset_path: str = os.path.join(os.path.dirname(__file__), "poems.json"),
+        sequence_length: int = 100,
     ):
         self.sequence_length = sequence_length
         self._load_dataset(dataset_path)
