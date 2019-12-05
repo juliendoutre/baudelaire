@@ -19,26 +19,26 @@ class Baudelaire:
         self,
         dataset_path: str = os.path.join(os.path.dirname(__file__), "poems.json"),
         sequence_length: int = 100,
-    ):
+    ) -> None:
         self.sequence_length = sequence_length
         self._load_dataset(dataset_path)
         self._create_character_number_mapping()
         self._preprocess()
         self._build_model()
 
-    def _load_dataset(self, path: str):
+    def _load_dataset(self, path: str) -> None:
         with open(path, "r") as file:
             poems = json.load(file)
             self.corpus = (
                 "\n".join(["\n".join(poem["text"]) for poem in poems]).strip().lower()
             )
 
-    def _create_character_number_mapping(self):
+    def _create_character_number_mapping(self) -> None:
         self.characters = sorted(list(set(self.corpus)))
         self.number_to_character = {n: char for (n, char) in enumerate(self.characters)}
         self.character_to_number = {char: n for (n, char) in enumerate(self.characters)}
 
-    def _preprocess(self):
+    def _preprocess(self) -> None:
         sequences, labels = [], []
 
         for i in range(len(self.corpus) - self.sequence_length):
@@ -59,7 +59,7 @@ class Baudelaire:
 
         self.labels = np_utils.to_categorical(labels)
 
-    def _build_model(self):
+    def _build_model(self) -> None:
         self.model = Sequential()
 
         self.model.add(
@@ -82,7 +82,9 @@ class Baudelaire:
     def _sequence_to_string(self, sequence: np.array) -> str:
         return "".join([self.number_to_character[value] for value in sequence])
 
-    def train(self, epochs: int = 1, batch_size: int = 100, save_weights: bool = False):
+    def train(
+        self, epochs: int = 1, batch_size: int = 100, save_weights: bool = False
+    ) -> None:
         self.model.fit(
             self.sequences, self.labels, epochs=epochs, batch_size=batch_size
         )
@@ -90,7 +92,7 @@ class Baudelaire:
         if save_weights:
             self.model.save_weights(f"weights/weights_{epochs}_{batch_size}.h5")
 
-    def load_weights(self, path: str = "weights/weights.h5"):
+    def load_weights(self, path: str = "weights/weights.h5") -> None:
         self.model.load_weights(path)
 
     def generate(self, starting_sequence: np.array) -> np.array:
@@ -118,8 +120,6 @@ class Baudelaire:
         return output
 
 
-def write_to_file(
-    contents: str, path: str = "poem.txt",
-):
+def write_to_file(contents: str, path: str = "poem.txt",) -> None:
     with open(path, "w") as file:
         file.write(contents)

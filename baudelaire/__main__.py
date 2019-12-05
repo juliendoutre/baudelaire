@@ -5,7 +5,7 @@ import os
 from .baudelaire import Baudelaire, write_to_file
 
 
-def main():
+def main() -> None:
     baudelaire = Baudelaire()
     baudelaire.load_weights(
         path=os.path.join(os.path.dirname(__file__), "weights/weights1.h5")

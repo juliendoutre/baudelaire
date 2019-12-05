@@ -33,7 +33,7 @@ jobs:
     - name: Check typing with mypy
       run: |
         pip install mypy
-        mypy
+        mypy baudelaire
     - name: Test with pytest
       run: |
         pip install pytest
