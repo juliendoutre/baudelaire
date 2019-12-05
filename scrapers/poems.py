@@ -14,6 +14,7 @@ class PoemsScrapper(scrapy.Spider):
     start_urls = ["https://www.poesie-francaise.fr/poemes-charles-baudelaire/"]
     reg1 = re.compile(r"\<span class=\"decalage\d+\"\>\<\/span\>")
     reg2 = re.compile(r"\<i class=\"poemes-auteurs\">\u00c9crit en \d\d\d\d\.\<\/i\>")
+    reg3 = re.compile(r"\n+")
 
     def parse(self, response):
         for poeme_link_container in response.css(".poemes-auteurs"):
@@ -29,16 +30,19 @@ class PoemsScrapper(scrapy.Spider):
         yield {
             "title": title.replace("Titre : ", ""),
             "collection": collection,
-            "text": self.reg1.sub(
-                "",
-                self.reg2.sub(
+            "text": self.reg3.sub(
+                "\n",
+                self.reg1.sub(
                     "",
-                    text.replace("<p>", "")
-                    .replace("</p>", "")
-                    .replace("<b>", "")
-                    .replace("</b>", "")
-                    .replace("<br>", "")
-                    .replace("Sonnet.", ""),
+                    self.reg2.sub(
+                        "",
+                        text.replace("<p>", "")
+                        .replace("</p>", "")
+                        .replace("<b>", "")
+                        .replace("</b>", "")
+                        .replace("<br>", "\n")
+                        .replace("Sonnet.", ""),
+                    ),
                 ),
             ),
         }
