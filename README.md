@@ -14,7 +14,7 @@ pip3 install baudelaire
 ```shell
 baudelaire --help
 baudelaire train --epochs 100 --batch_size 50 -o weights.h5
-baudelaire generate --lines 10 -o poem.txt
+baudelaire write --sequences 10 -o poem.txt -i weights.h5
 ```
 
 ## Set the environment
