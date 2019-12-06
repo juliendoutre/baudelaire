@@ -3,7 +3,7 @@
 
 import os
 import argparse
-from baudelaire.baudelaire import Baudelaire, write_to_file
+from baudelaire.baudelaire import Baudelaire
 from baudelaire.log import init_logger
 
 
@@ -79,8 +79,6 @@ def main() -> None:
         baudelaire.train(args.output, epochs=args.epochs, batch_size=args.batch_size)
 
     elif cmd == "write":
-        baudelaire = Baudelaire(sequence_length=args.sequence_length)
-
         if args.input is None:
             baudelaire.load_weights()
         else:
@@ -91,7 +89,7 @@ def main() -> None:
         if args.output is None:
             print(output)
         else:
-            write_to_file(output, path=args.output)
+            baudelaire.write_to_file(output, path=args.output)
 
     else:
         raise parser.error(f"Invalid command {cmd}")

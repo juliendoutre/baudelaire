@@ -5,6 +5,7 @@ import os
 import json
 import random
 import warnings
+import logging
 
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 warnings.simplefilter(action="ignore", category=FutureWarning)
@@ -28,6 +29,9 @@ class Baudelaire:
         self._build_model()
 
     def _load_dataset(self, path: str) -> None:
+        if self.verbose:
+            logging.info(f"Loading dataset from {path}")
+
         with open(path, "r") as file:
             poems = json.load(file)
             self.corpus = (
@@ -40,6 +44,9 @@ class Baudelaire:
         self.character_to_number = {char: n for (n, char) in enumerate(self.characters)}
 
     def _preprocess(self) -> None:
+        if self.verbose:
+            logging.info(f"Preprocessing {len(self.corpus)} characters")
+
         sequences, labels = [], []
 
         for i in range(len(self.corpus) - self.sequence_length):
@@ -60,7 +67,13 @@ class Baudelaire:
 
         self.labels = np_utils.to_categorical(labels)
 
+        if self.verbose:
+            logging.info(f"{len(self.sequences)} sequences in the corpus")
+
     def _build_model(self) -> None:
+        if self.verbose:
+            logging.info("Building the model")
+
         self.model = Sequential()
 
         self.model.add(
@@ -78,21 +91,35 @@ class Baudelaire:
         self.model.add(Dropout(0.2))
         self.model.add(Dense(self.labels.shape[1], activation="softmax"))
 
+        if self.verbose:
+            logging.info("Compiling the model")
+
         self.model.compile(loss="categorical_crossentropy", optimizer="adam")
 
     def _sequence_to_string(self, sequence: np.array) -> str:
         return "".join([self.number_to_character[value] for value in sequence])
 
     def train(self, weights_path: str, epochs: int = 1, batch_size: int = 100) -> None:
+        if self.verbose:
+            logging.info(
+                f"Training the model with {epochs} epochs and a {batch_size} batch size"
+            )
+
         self.model.fit(
             self.sequences, self.labels, epochs=epochs, batch_size=batch_size
         )
 
         self.model.save_weights(weights_path)
 
+        if self.verbose:
+            logging.info(f"Saving weights to {weights_path}")
+
     def load_weights(
         self, path: str = os.path.join(os.path.dirname(__file__), "data/weights.h5")
     ) -> None:
+        if self.verbose:
+            logging.info(f"Loading weights from {path}")
+
         self.model.load_weights(path)
 
     def generate(self, starting_sequence: np.array) -> np.array:
@@ -110,16 +137,24 @@ class Baudelaire:
         return starting_sequence
 
     def generate_lines(self, lines_number: int) -> str:
+        if self.verbose:
+            logging.info(f"Generating {lines_number} sequences")
+
         starting_sequence = self.sequences[random.randint(0, len(self.sequences))]
         output = self._sequence_to_string(starting_sequence) + "\n"
 
-        for _ in range(lines_number):
+        for i in range(lines_number):
             starting_sequence = self.generate(starting_sequence)
             output += self._sequence_to_string(starting_sequence)
 
+            if self.verbose:
+                logging.info(f"New sequence generated ({i+1}/{lines_number})")
+
         return output
 
+    def write_to_file(self, contents: str, path: str = "poem.txt") -> None:
+        if self.verbose:
+            logging.info(f"Writing output to file {path}")
 
-def write_to_file(contents: str, path: str = "poem.txt") -> None:
-    with open(path, "w") as file:
-        file.write(contents)
+        with open(path, "w") as file:
+            file.write(contents)
