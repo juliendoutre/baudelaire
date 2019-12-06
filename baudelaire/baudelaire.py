@@ -19,7 +19,8 @@ class Baudelaire:
     A text generator trained over Baudelaire's poems.
     """
 
-    def __init__(self, sequence_length: int = 100) -> None:
+    def __init__(self, sequence_length: int = 100, verbose: bool = False) -> None:
+        self.verbose = verbose
         self.sequence_length = sequence_length
         self._load_dataset(os.path.join(os.path.dirname(__file__), "data/poems.json"))
         self._create_character_number_mapping()

@@ -3,13 +3,18 @@
 
 import os
 import argparse
-from .baudelaire import Baudelaire, write_to_file
+from baudelaire.baudelaire import Baudelaire, write_to_file
+from baudelaire.log import init_logger
 
 
 def main() -> None:
+    init_logger()
+
     parser = argparse.ArgumentParser(
-        description="A text generator trained over Baudelaire's poems"
+        description="A text generator trained over Baudelaire's poems",
     )
+
+    parser.add_argument("-v", "--verbose", help="Verbose mode", action="store_true")
 
     subparsers = parser.add_subparsers(help="Available commands", dest="cmd")
 
@@ -67,7 +72,7 @@ def main() -> None:
 
     args = parser.parse_args()
 
-    baudelaire = Baudelaire(sequence_length=args.sequence_length)
+    baudelaire = Baudelaire(sequence_length=args.sequence_length, verbose=args.verbose)
 
     cmd = args.cmd
     if cmd == "train":

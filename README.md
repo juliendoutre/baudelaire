@@ -54,6 +54,3 @@ This json was generated with the `scraping/analyzer.py` script.
 
 - https://www.digitalocean.com/community/tutorials/how-to-crawl-a-web-page-with-scrapy-and-python-3
 - https://www.analyticsvidhya.com/blog/2018/03/text-generation-using-python-nlp/
-
-## TODO
-- add logging with a verbose mode
