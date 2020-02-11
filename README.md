@@ -1,4 +1,4 @@
-# Baudelaire
+# Baudelaire 📝
 
 A text generator trained over Baudelaire's poems.
 
