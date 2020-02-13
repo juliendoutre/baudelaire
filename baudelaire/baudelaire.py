@@ -106,7 +106,7 @@ class Baudelaire:
             )
 
         self.model.fit(
-            self.sequences, self.labels, epochs=epochs, batch_size=batch_size
+            self.normalized_sequences, self.labels, epochs=epochs, batch_size=batch_size
         )
 
         self.model.save_weights(weights_path)
